@@ -12,7 +12,7 @@
 		
 		#canvas {
 			width: 320px;
-			height: 320px;
+			height: 568px;
 		}
 
 		#text {
@@ -22,7 +22,7 @@
 			font-size: 20px;
 			line-height: 36px;
 			color: #fff;
-			left: 0px; top: 0px; width:320px; height:320px;
+			left: 0px; top: 0px; width:320px; height:568px;
 			display: flex;
   			justify-content: center;
   			align-items: center;
@@ -31,7 +31,19 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>
 	<script type="text/javascript" src="jquery.touchSwipe.min.js" ></script>
-
+	<script>
+	   $(function() {      
+	      //Enable swiping...
+	      $("#canvas").swipe( {
+	        //Generic swipe handler for all directions
+	        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+	          $("text").text("You swiped " + direction );  
+	        },
+	        //Default is 75px, set to 0 for demo so any distance triggers swipe
+	         threshold:0
+	      });
+	    });	
+	</script>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="webkit-touch-callout" content="none">
