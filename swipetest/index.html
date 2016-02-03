@@ -14,7 +14,23 @@
 			width: 320px;
 			height: 320px;
 		}
+
+		#text {
+			position: absolute;
+			z-index: 1;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 36px;
+			color: #fff;
+			left: 0px; top: 0px; width:320px; height:320px;
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
 	</style>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>
+	<script type="text/javascript" src="jquery.touchSwipe.min.js" ></script>
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -25,7 +41,9 @@
 </head>
 <body>
 	<div id="game">
-	  <canvas id="canvas"></canvas>
+	  <canvas id="canvas">
+	  </canvas>
+	  <div id="text">SOME TEXT TO</div>
 	</div>
 </body>
 </html>
